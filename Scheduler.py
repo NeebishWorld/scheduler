@@ -1,9 +1,5 @@
 import pandas as pd
 
-
-
-
-
 days = ["Mon", "Tue", "Wed", "Thu", "Fri"]
 periods = [
     "09:00-09:45",
@@ -22,8 +18,23 @@ df = pd.DataFrame("", index=periods, columns=days)
 
 # 여기서부 다시 시작하면 될듯.
 teachers = [
-  {"name":"Adam", "can_teach":["ALG2"], "avail":{"Mon":[(9,12.25),(13,16.25)], ...}},
-]
+  {
+  "name":"Adam", 
+   "can_teach":["ALG2", "CS", "CAL_BC"], 
+   "avail":{
+       "Mon":[(9,10, 11, 12, 1, 2, 3, 4)], 
+       "Tue":[(9,10, 11, 12, 1, 2, 3, 4)]
+       }
+  }, 
+    {
+  "name":"Seoneun", 
+   "can_teach":["ALG2", "CS", "CAL_BC"], 
+   "avail":{
+       "Mon":[(9,10, 11, 12, 1, 2, 3, 4)], 
+       "Tue":[(9,10, 11, 12, 1, 2, 3, 4)]
+       }
+  }
+  ]
 subjects = [{"code":"ALG2", "meetings_per_week":5}]
 students = [{"name":"S1", "required":["ALG2","ENG10"]}]
 
