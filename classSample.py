@@ -6,24 +6,85 @@ class Worker:
         self.birth = birth # str ex)"1999.10.30"
         self.contact = contact # str ex) "01024631234"
         self.workingDays = days # int
-        self.workingHr = hours # float
+        self.workingHrs = hours # float
         self.salary = salary    # float
 
     # getter
-        def getFirstName(self) -> str:
-            return self.firstName
+    def getFirstName(self) -> str:
+        '''
+        return the first name
+        '''
+        return self.firstName
+
+    def getLastName(self) -> str:
+        '''
+        return the last name 
+        '''
+        return self.lastName
+
+    def getBirth(self) -> str:
+        return self.birth
+
+    def getContact(self) -> str:
+        return self.contact
+
+    def getWorkingDays(self) -> int:
+        return self.workingDays
+
+    def getWorkingHours(self) -> float:
+        return self.workingHrs
+
+    def getSalary(self) -> float:
+        return self.salary
 
     # setter
-        def setFirstName(self, newFristName) -> None:
-            self.firstName = newFristName
+    def setFirstName(self, newFristName:str) -> None:
+        '''
+        replace the first name with the new name
+        '''
+        self.firstName = newFristName
+
+    def setLastName(self, newLastName:str) -> None:
+        self.lastName = lastName
+
+    def setBirth(self, birth:str) -> None:
+        self.birth = birth
+
+    def setContact(self, newContact:str) -> None:
+        self.contact = newContact
+
+    def setWorkingDays(self, newWorkingDays:int) -> None:
+        self.days = newWorkingDays
+
+    def setWorkingHours(self, newWorkingHours:float) -> None:
+        self.workingHrs = newWorkingHours
+        
+    def setSalary(self, newSalary:float) -> None:
+        self.salary = newSalary
 
 
 
+class Teacher(Worker):
+    def __init__(self, subjects:list, email:str, firstName, lastName, birth, contact="01024447777", days=0, hours=0, salary=0):
+        super().__init__(firstName, lastName, birth, contact, days, hours, salary)
+        self.subjects = subjects
+        self.email = email
+
+    # setter
+    def setSubjects(self, subjectLists:list)->None:
+        self.subjects = subjectLists
+
+    def setEmail(self, newEmail:str)->None:
+        self.email = newEmail
+
+    # getter 
+    def getSubject(self) -> list:
+        return self.subjects
+
+    def getEmail(self) -> str:
+        return self.email
 
 
-# Make a class instance
-Worker("Adam", "Oh", "1989.10.25")
-Worker("Seoneun", "Oh", "1993.07.01")
 
-
-    
+t01 = Teacher(["CS", "CalBC"], "adam.oh@libertas-jesus.org", "Adam", "Oh", "1999.7.25", "0102463XXXX", 5, 7, 100000)
+print(t01.getBirth())
