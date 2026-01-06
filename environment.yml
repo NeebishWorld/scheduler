@@ -1,0 +1,7 @@
+name: /mnt/data/myProjects/scheduler/scheduler-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pandas
+prefix: /mnt/data/myProjects/scheduler/scheduler-env
