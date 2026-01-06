@@ -25,6 +25,35 @@ class Worker:
     def getBirth(self) -> str:
         return self.birth
 
+    def getBirthYear(self)->int:
+        '''
+        Return the birth year as int
+        '''
+        temp = self.birth
+
+        storage = list()
+        word = ""
+        for each in temp:
+            if each != '.':
+                word = word + each
+            else:
+                storage.append(word)
+                word = ""
+        storage.append(word)
+
+        # print(storage)    
+
+        newStorage = list()
+        for each in storage:
+            newStorage.append(int(each))
+        
+        # print(newStorage)
+
+        return newStorage[0]
+
+    def getBirthYear02(self)->int:
+        return int(self.birth.split(".")[0])
+
     def getContact(self) -> str:
         return self.contact
 
@@ -88,3 +117,5 @@ class Teacher(Worker):
 
 t01 = Teacher(["CS", "CalBC"], "adam.oh@libertas-jesus.org", "Adam", "Oh", "1999.7.25", "0102463XXXX", 5, 7, 100000)
 print(t01.getBirth())
+print(t01.getBirthYear())
+print(t01.getBirthYear02())
