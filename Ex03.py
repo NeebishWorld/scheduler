@@ -32,8 +32,6 @@ class Student:
         self.name = newName
 
     
-
-    
 def makeList(given:Student) -> None:
     target.append(given)
 
@@ -41,6 +39,7 @@ def makeList(given:Student) -> None:
 s1 = Student("Alice", 20, 88)
 s2 = Student("Bob",21,92)
 s3 = Student("Charlie", 19, 79)
+
 
 target.append(s1)
 target.append(s2)
