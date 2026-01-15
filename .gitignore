@@ -1,2 +1,3 @@
-venv/
-*.csv
+scheduler-env/*
+#*.csv
+info.csv
