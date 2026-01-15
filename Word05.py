@@ -85,7 +85,7 @@ while running:
             if left_button.collidepoint(mouse_pos):
                 # 이전 상태
                 if vocab_number <= 0:
-                    vocab_number == vocab_number
+                    pass
                 else:
                     vocab_number -= 1
 
