@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LSCP Vocab World</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="helper.css" />
+  <title>LSCP Vocab World</title>
 </head>
 <body>
-    We just started!!
+  <main class="stage">
+    <section class="game">
+
+      <!-- HOME SCREEN -->
+      <div class="screen screen--active" id="screen-home">
+        <h1 class="title">LSCP Vocab</h1>
+        <p class="subtitle">Choose a mode to continue</p>
+
+        <div class="menu">
+          <button class="btn btn--primary" data-go="study">STUDY</button>
+          <button class="btn btn--secondary" data-go="test">TEST</button>
+        </div>
+      </div>
+
+      <!-- STUDY SCREEN -->
+      <div class="screen" id="screen-study">
+        <div class="topbar">
+          <button class="btn btn--ghost" data-go="home">← Home</button>
+          <div class="badge">STUDY MODE</div>
+        </div>
+
+        <div class="content">
+          <h2>Study</h2>
+          <p>This is the Study screen (placeholder).</p>
+        </div>
+      </div>
+
+      <!-- TEST SCREEN -->
+      <div class="screen" id="screen-test">
+        <div class="topbar">
+          <button class="btn btn--ghost" data-go="home">← Home</button>
+          <div class="badge">TEST MODE</div>
+        </div>
+
+        <div class="content">
+          <h2>Test</h2>
+          <p>This is the Test screen (placeholder).</p>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="jsFiles/helper.js"></script>
 </body>
 </html>
