@@ -1,55 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="helper.css" />
-  <title>LSCP Vocab World</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="helper.css" />
+    <title>LSCP Vocab World</title>
 </head>
+
 <body>
-  <main class="stage">
-    <section class="game">
+    <main class="stage">
+        <section class="game">
 
-      <!-- HOME SCREEN -->
-      <div class="screen screen--active" id="screen-home">
-        <h1 class="title">LSCP Vocab</h1>
-        <p class="subtitle">Choose a mode to continue</p>
+            <!-- STUDY SCREEN -->
+            <div class="screen" id="screen-study">
+                <div class="topbar">
+                    <button class="btn btn--ghost" data-go="home">← Home</button>
+                    <div class="badge">STUDY MODE</div>
+                </div>
 
-        <div class="menu">
-          <button class="btn btn--primary" data-go="study">STUDY</button>
-          <button class="btn btn--secondary" data-go="test">TEST</button>
-        </div>
-      </div>
+                <div class="content">
+                    <h2>Study</h2>
 
-      <!-- STUDY SCREEN -->
-      <div class="screen" id="screen-study">
-        <div class="topbar">
-          <button class="btn btn--ghost" data-go="home">← Home</button>
-          <div class="badge">STUDY MODE</div>
-        </div>
+                    <div class="card">
+                        <div class="word" id="study-word">Loading...</div>
+                        <div class="meaning" id="study-meaning"></div>
+                        <div class="example" id="study-example"></div>
+                    </div>
 
-        <div class="content">
-          <h2>Study</h2>
-          <p>This is the Study screen (placeholder).</p>
-        </div>
-      </div>
+                    <div class="controls">
+                        <button class="btn btn--secondary" id="study-prev">Prev</button>
+                        <button class="btn btn--primary" id="study-next">Next</button>
+                    </div>
 
-      <!-- TEST SCREEN -->
-      <div class="screen" id="screen-test">
-        <div class="topbar">
-          <button class="btn btn--ghost" data-go="home">← Home</button>
-          <div class="badge">TEST MODE</div>
-        </div>
+                    <div class="meta" id="study-meta"></div>
+                </div>
+            </div>
 
-        <div class="content">
-          <h2>Test</h2>
-          <p>This is the Test screen (placeholder).</p>
-        </div>
-      </div>
 
-    </section>
-  </main>
+            <!-- TEST SCREEN -->
+            <div class="screen" id="screen-test">
+                <div class="topbar">
+                    <button class="btn btn--ghost" data-go="home">← Home</button>
+                    <div class="badge">TEST MODE</div>
+                </div>
 
-  <script src="jsFiles/helper.js"></script>
+                <div class="content">
+                    <h2>Test</h2>
+                    <p>This is the Test screen (placeholder).</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="jsFiles/helper.js"></script>
 </body>
+
 </html>
